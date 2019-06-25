@@ -52,7 +52,7 @@ class ScrollableBottomSheetViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func panGesture(_ recognizer: UIPanGestureRecognizer) {
+    @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {
         
         let translation = recognizer.translation(in: self.view)
         let velocity = recognizer.velocity(in: self.view)

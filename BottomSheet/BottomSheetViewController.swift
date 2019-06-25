@@ -58,7 +58,7 @@ class BottomSheetViewController: UIViewController {
         }) 
     }
     
-    func panGesture(_ recognizer: UIPanGestureRecognizer) {
+    @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {
         
         let translation = recognizer.translation(in: self.view)
         let velocity = recognizer.velocity(in: self.view)
@@ -89,7 +89,7 @@ class BottomSheetViewController: UIViewController {
         holdView.layer.cornerRadius = 3
         left.layer.cornerRadius = 10
         right.layer.cornerRadius = 10
-        left.layer.borderColor = UIColor(colorLiteralRed: 0, green: 148/255, blue: 247.0/255.0, alpha: 1).cgColor
+        left.layer.borderColor = UIColor(red: 0, green: 148/255, blue: 247.0/255.0, alpha: 1).cgColor
         left.layer.borderWidth = 1
         view.clipsToBounds = true
     }

@@ -27,9 +27,9 @@ class LandingViewController: UIViewController {
     func addBottomSheetView(scrollable: Bool? = true) {
         let bottomSheetVC = scrollable! ? ScrollableBottomSheetViewController() : BottomSheetViewController()
         
-        self.addChildViewController(bottomSheetVC)
+        self.addChild(bottomSheetVC)
         self.view.addSubview(bottomSheetVC.view)
-        bottomSheetVC.didMove(toParentViewController: self)
+        bottomSheetVC.didMove(toParent: self)
 
         let height = view.frame.height
         let width  = view.frame.width
