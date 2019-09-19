@@ -11,13 +11,10 @@
 		201DA4CC1D25D88A00F2786C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201DA4CB1D25D88A00F2786C /* Assets.xcassets */; };
 		201DA4CF1D25D88A00F2786C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201DA4CD1D25D88A00F2786C /* LaunchScreen.storyboard */; };
 		201DA4D81D25D90E00F2786C /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201DA4D61D25D90E00F2786C /* BottomSheetViewController.swift */; };
-		201DA4D91D25D90E00F2786C /* BottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201DA4D71D25D90E00F2786C /* BottomSheetViewController.xib */; };
 		201DA4DC1D25D98300F2786C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201DA4DA1D25D98300F2786C /* LandingViewController.swift */; };
-		201DA4DD1D25D98300F2786C /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201DA4DB1D25D98300F2786C /* LandingViewController.xib */; };
 		20B120841DB28041004C372F /* ScrollableBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B120821DB28041004C372F /* ScrollableBottomSheetViewController.swift */; };
-		20B120851DB28041004C372F /* ScrollableBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B120831DB28041004C372F /* ScrollableBottomSheetViewController.xib */; };
-		20B120881DB28190004C372F /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B120861DB28190004C372F /* DefaultTableViewCell.swift */; };
-		20B120891DB28190004C372F /* DefaultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B120871DB28190004C372F /* DefaultTableViewCell.xib */; };
+		DD4A2E522333E65200FDBF8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4A2E512333E65200FDBF8B /* Main.storyboard */; };
+		DD4A2E542333E76F00FDBF8B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4A2E532333E76F00FDBF8B /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,13 +24,10 @@
 		201DA4CE1D25D88A00F2786C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		201DA4D01D25D88A00F2786C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201DA4D61D25D90E00F2786C /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
-		201DA4D71D25D90E00F2786C /* BottomSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomSheetViewController.xib; sourceTree = "<group>"; };
 		201DA4DA1D25D98300F2786C /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
-		201DA4DB1D25D98300F2786C /* LandingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
 		20B120821DB28041004C372F /* ScrollableBottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableBottomSheetViewController.swift; sourceTree = "<group>"; };
-		20B120831DB28041004C372F /* ScrollableBottomSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollableBottomSheetViewController.xib; sourceTree = "<group>"; };
-		20B120861DB28190004C372F /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
-		20B120871DB28190004C372F /* DefaultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultTableViewCell.xib; sourceTree = "<group>"; };
+		DD4A2E512333E65200FDBF8B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DD4A2E532333E76F00FDBF8B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,16 +60,13 @@
 		201DA4C31D25D88A00F2786C /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
-				201DA4D61D25D90E00F2786C /* BottomSheetViewController.swift */,
-				201DA4D71D25D90E00F2786C /* BottomSheetViewController.xib */,
+				DD4A2E532333E76F00FDBF8B /* Utilities.swift */,
 				201DA4DA1D25D98300F2786C /* LandingViewController.swift */,
-				201DA4DB1D25D98300F2786C /* LandingViewController.xib */,
+				201DA4D61D25D90E00F2786C /* BottomSheetViewController.swift */,
 				20B120821DB28041004C372F /* ScrollableBottomSheetViewController.swift */,
-				20B120831DB28041004C372F /* ScrollableBottomSheetViewController.xib */,
-				20B120861DB28190004C372F /* DefaultTableViewCell.swift */,
-				20B120871DB28190004C372F /* DefaultTableViewCell.xib */,
 				201DA4CB1D25D88A00F2786C /* Assets.xcassets */,
 				201DA4C41D25D88A00F2786C /* AppDelegate.swift */,
+				DD4A2E512333E65200FDBF8B /* Main.storyboard */,
 				201DA4CD1D25D88A00F2786C /* LaunchScreen.storyboard */,
 				201DA4D01D25D88A00F2786C /* Info.plist */,
 			);
@@ -142,12 +133,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				201DA4DD1D25D98300F2786C /* LandingViewController.xib in Resources */,
-				20B120851DB28041004C372F /* ScrollableBottomSheetViewController.xib in Resources */,
+				DD4A2E522333E65200FDBF8B /* Main.storyboard in Resources */,
 				201DA4CF1D25D88A00F2786C /* LaunchScreen.storyboard in Resources */,
-				20B120891DB28190004C372F /* DefaultTableViewCell.xib in Resources */,
 				201DA4CC1D25D88A00F2786C /* Assets.xcassets in Resources */,
-				201DA4D91D25D90E00F2786C /* BottomSheetViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,11 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4A2E542333E76F00FDBF8B /* Utilities.swift in Sources */,
 				20B120841DB28041004C372F /* ScrollableBottomSheetViewController.swift in Sources */,
 				201DA4D81D25D90E00F2786C /* BottomSheetViewController.swift in Sources */,
 				201DA4DC1D25D98300F2786C /* LandingViewController.swift in Sources */,
 				201DA4C51D25D88A00F2786C /* AppDelegate.swift in Sources */,
-				20B120881DB28190004C372F /* DefaultTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,31 +9,35 @@
 import UIKit
 
 class LandingViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         addBottomSheetView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    func addBottomSheetView(scrollable: Bool? = true) {
-        let bottomSheetVC = scrollable! ? ScrollableBottomSheetViewController() : BottomSheetViewController()
+    func addBottomSheetView() {
         
-        self.addChild(bottomSheetVC)
-        self.view.addSubview(bottomSheetVC.view)
-        bottomSheetVC.didMove(toParent: self)
+        let scrollable = tabBarItem.title == "Scrollable"
+        
+        let bottomVC: UIViewController
+        
+        switch scrollable {
+        case true:
+            guard let bottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "scrollableBottomSheetVC") as? ScrollableBottomSheetViewController else { fatalError() }
+            bottomVC = bottomSheetVC
+
+        case false:
+            guard let bottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "bottomSheetVC") as? BottomSheetViewController else { fatalError() }
+            bottomVC = bottomSheetVC
+        }
+        
+        self.addChild(bottomVC)
+        self.view.addSubview(bottomVC.view)
+        bottomVC.didMove(toParent: self)
 
         let height = view.frame.height
         let width  = view.frame.width
-        bottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+        bottomVC.view.frame = CGRect(x: 0, y: view.frame.maxY, width: width, height: height)
     }
 
 }

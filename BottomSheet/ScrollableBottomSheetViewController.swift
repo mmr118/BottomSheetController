@@ -9,27 +9,23 @@
 import UIKit
 
 class ScrollableBottomSheetViewController: UIViewController {
+    
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     let fullView: CGFloat = 100
-    var partialView: CGFloat {
-        return UIScreen.main.bounds.height - 150
-    }
+    
+    var partialView: CGFloat { return UIScreen.main.bounds.height - 150 }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: "DefaultTableViewCell", bundle: nil), forCellReuseIdentifier: "default")
-        
         searchBar.isUserInteractionEnabled = false
         
-        let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(ScrollableBottomSheetViewController.panGesture))
-        gesture.delegate = self
-        view.addGestureRecognizer(gesture)
+//        let gesture = UIPanGestureRecognizer(target: self, action: #selector(panGesture))
+//        gesture.delegate = self
+//        view.addGestureRecognizer(gesture)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,12 +43,7 @@ class ScrollableBottomSheetViewController: UIViewController {
             })
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {
+    @IBAction func panGesture(_ recognizer: UIPanGestureRecognizer) {
         
         let translation = recognizer.translation(in: self.view)
         let velocity = recognizer.velocity(in: self.view)

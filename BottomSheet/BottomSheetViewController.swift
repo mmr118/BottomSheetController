@@ -9,22 +9,21 @@
 import UIKit
 
 class BottomSheetViewController: UIViewController {
+    
     // holdView can be UIImageView instead
     @IBOutlet weak var holdView: UIView!
     @IBOutlet weak var left: UIButton!
     @IBOutlet weak var right: UIButton!
     
     let fullView: CGFloat = 100
-    var partialView: CGFloat {
-        return UIScreen.main.bounds.height - (left.frame.maxY + UIApplication.shared.statusBarFrame.height)
-    }
+    var partialView: CGFloat { return UIScreen.main.bounds.height - (left.frame.maxY + UIApplication.shared.statusBarFrame.height) }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(BottomSheetViewController.panGesture))
         view.addGestureRecognizer(gesture)
         
-        roundViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,12 +38,9 @@ class BottomSheetViewController: UIViewController {
             let frame = self?.view.frame
             let yComponent = self?.partialView
             self?.view.frame = CGRect(x: 0, y: yComponent!, width: frame!.width, height: frame!.height)
-        }) 
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+            }) { _ in
+                self.checkIBInspectibles()
+        }
     }
     
     @IBAction func rightButton(_ sender: AnyObject) {
@@ -84,14 +80,36 @@ class BottomSheetViewController: UIViewController {
         }
     }
     
-    func roundViews() {
-        view.layer.cornerRadius = 5
-        holdView.layer.cornerRadius = 3
-        left.layer.cornerRadius = 10
-        right.layer.cornerRadius = 10
-        left.layer.borderColor = UIColor(red: 0, green: 148/255, blue: 247.0/255.0, alpha: 1).cgColor
-        left.layer.borderWidth = 1
-        view.clipsToBounds = true
+    func checkIBInspectibles() {
+        
+        if (view.layer.cornerRadius == 5) == false {
+            assertionFailure()
+        }
+        
+        if (view.clipsToBounds == true) == false {
+            assertionFailure()
+        }
+        
+        if (holdView.layer.cornerRadius == 3) == false {
+            assertionFailure()
+        }
+        
+        if (left.layer.cornerRadius == 10) == false {
+            assertionFailure()
+        }
+        
+        if (left.layer.borderColor == UIColor(red: 0, green: 148/255, blue: 247.0/255.0, alpha: 1).cgColor) == false {
+//            assertionFailure()
+        }
+        
+        if (left.layer.borderWidth == 1) == false {
+            assertionFailure()
+        }
+        
+        if (right.layer.cornerRadius == 10) == false {
+            assertionFailure()
+        }
+        
     }
     
     func prepareBackgroundView(){
